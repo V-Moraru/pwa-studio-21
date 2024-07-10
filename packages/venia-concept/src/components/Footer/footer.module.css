@@ -1,0 +1,4 @@
+.links {
+    composes: links from '@magento/venia-ui/lib/components/Footer/footer.module.css';
+    color: var(--drexel-global-color-blue-100);
+}

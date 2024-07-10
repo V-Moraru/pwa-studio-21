@@ -9,12 +9,13 @@ import Logo from '@magento/venia-ui/lib/components/Logo';
 import Newsletter from '@magento/venia-ui/lib/components/Newsletter';
 import { useStyle } from '@magento/venia-ui/lib/classify';
 import defaultClasses from '@magento/venia-ui/lib/components/Footer/footer.module.css';
+import localClasses from './footer.module.css';
 import { DEFAULT_LINKS, LOREM_IPSUM } from "@magento/venia-ui/lib/components/Footer/sampleData";
 import resourceUrl from '@magento/peregrine/lib/util/makeUrl';
 
 const Footer = props => {
     const { links } = props;
-    const classes = useStyle(defaultClasses, props.classes);
+    const classes = useStyle(defaultClasses, localClasses, props.classes);
     const talonProps = useFooter();
 
     const { copyrightText } = talonProps;
